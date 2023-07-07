@@ -43,9 +43,11 @@ function randomNoSpecNoNumLetter() {
   return randomLetter;
 };
 function allTrue(userAmt) {
+  console.log(userAmt)
+  var length = userAmt
   var charList = ""
-  for(var i = 0; i < userAmt; i++){
-    charList.concat(randomAllLetter())
+  for(var i = 0; i < length; i++){
+    charList = charList.concat(randomAllLetter())
   }
   return charList;
 };
@@ -80,6 +82,7 @@ function beginPrompt(){
   }
   if(userLower == "Yes" && userUpper == "Yes" && userNum == "Yes" && userSpec == "Yes") {
     document.querySelector("#password").textContent = allTrue(userAmt)
+    console.log(userAmt)
     console.log(allTrue(userAmt))
   }
 }
